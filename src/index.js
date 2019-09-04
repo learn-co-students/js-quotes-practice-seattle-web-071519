@@ -3,6 +3,18 @@
 document.addEventListener('DOMContentLoaded',main)
 
 function main(){
+
+    sortById()
+
+    document.getElementById('new-quote-form').onsubmit = e => {
+        e.preventDefault()
+        newQuote()
+    }
+
+    document.getElementById('sort').onclick = e => {toggleSort(e)}
+}
+
+function sortById(){
     fetch('http://localhost:3000/quotes')
     .then(res => res.json())
     .then(json => {
@@ -10,11 +22,35 @@ function main(){
             renderQuote(json[i])
         }
     })
+    .then(()=>{document.getElementById('sort').textContent = 'Sort: id'})
+}
 
-    document.getElementById('new-quote-form').onsubmit = e => {
-        e.preventDefault()
-        newQuote()
+function toggleSort(event){
+    let quoteList = document.getElementById("quote-list")
+    while (quoteList.firstChild){
+        quoteList.removeChild(quoteList.firstChild)
     }
+
+    let alphaSort = event.target.parentElement.getAttribute('alphaSort')
+    if (alphaSort == 'true'){
+        event.target.parentElement.setAttribute('alphaSort','false')
+        sortById()
+    } else{
+        event.target.parentElement.setAttribute('alphaSort','true') 
+        alphabetSort()
+    }
+}
+
+function alphabetSort(){
+    fetch('http://localhost:3000/quotes')
+    .then(res => res.json())
+    .then(json => {
+        json = json.sort(function(a,b){ return a.author.localeCompare(b.author)})
+        for(let i = 0; i < json.length; i++){
+            renderQuote(json[i])
+        }
+    })
+    .then(()=>{document.getElementById('sort').textContent = 'Sort: Alphabet'})
 }
 
 function renderQuote(quote){
@@ -66,8 +102,13 @@ function renderQuote(quote){
     danButton.setAttribute('class','btn-danger')
     danButton.textContent = "Delete"
     danButton.onclick = e => {deleteQuote(e)}
-
     blockquote.appendChild(danButton)
+
+    
+    let editButton = document.createElement("button")
+    editButton.textContent = "Edit"
+    editButton.onclick = e => {showEditForm(e)}
+    blockquote.appendChild(editButton)
 }
 
 function newQuote(){
@@ -143,4 +184,69 @@ function updateLikes(quoteId){
             }
         }
     })
+}
+
+function showEditForm(event){
+    event.target.style.display = 'none'
+    let container = event.target.parentElement.parentElement
+    console.log(container)
+    let quoteEditForm = document.createElement('input')
+    quoteEditForm.value = container.firstChild.firstChild.textContent
+    quoteEditForm.setAttribute('id','quoteEditForm')
+    quoteEditForm.setAttribute('class',"form-control")
+    container.appendChild(quoteEditForm)
+
+    let authorEditForm = document.createElement('input')
+    authorEditForm.setAttribute('id','authorEditForm')
+    authorEditForm.setAttribute('class',"form-control")
+    authorEditForm.value = container.firstChild.children[1].textContent
+    
+    container.appendChild(authorEditForm)
+
+    let submitButton = document.createElement('button')
+    submitButton.innerText = 'Submit'
+    submitButton.setAttribute('id','submitEdit')
+    container.appendChild(submitButton)
+
+
+    let quoteId = container.getAttribute("quote-id")
+
+    submitButton.onclick = e => {
+        completeEdit(quoteId, e.target,event.target)
+    }
+}
+
+function completeEdit(quoteId,submitButton,editButton){
+    editButton.style.display = 'inline'
+
+    let authorDisplay = submitButton.previousSibling 
+    let quoteDisplay = authorDisplay.previousSibling
+
+    let quoteOnPage = submitButton.parentElement.firstChild.children[0]
+    let authorOnPage = submitButton.parentElement.firstChild.children[1]
+
+    fetch(`http://localhost:3000/quotes/${quoteId}`,{
+        method: "PATCH",
+        headers:{
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+            'quote': quoteDisplay.value,
+            'author': authorDisplay.value
+
+        })
+    })
+    .then(response => response.json())
+    .then(json => {
+       quoteOnPage.innerText = json.quote
+        authorOnPage.textContent = json.author
+        
+    })
+
+
+
+    authorDisplay.style.display = 'none'
+    quoteDisplay.style.display = 'none'
+    submitButton.style.display = 'none'
 }

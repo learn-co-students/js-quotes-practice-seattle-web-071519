@@ -14,6 +14,11 @@
       "id": 4,
       "quote": "You gain strength, courage and confidence by every experience in which you really stop to look fear in the face. You are able to say to yourself, 'I have lived through this horror. I can take the next thing that comes along.' You must do the thing you think you cannot do.",
       "author": "Eleanor Roosevelt"
+    },
+    {
+      "quote": "That'd fuck everything right up.",
+      "author": "A A",
+      "id": 5
     }
   ],
   "likes": [
@@ -804,6 +809,10 @@
     {
       "quoteId": "2",
       "id": 197
+    },
+    {
+      "quoteId": "3",
+      "id": 198
     }
   ]
 }
