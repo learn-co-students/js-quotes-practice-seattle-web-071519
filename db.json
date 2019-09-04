@@ -2,8 +2,8 @@
   "quotes": [
     {
       "id": 4,
-      "quote": "You gain strength, courage and confidence by every experience in which you really stop to look fear in the face. You are able to say to yourself, 'I have lived through this horror. I can take the next thing that comes along.' You must do the thing you think you cannot do.",
-      "author": "Eleanor Roosevelt"
+      "quote": "FOR HONOR!!",
+      "author": "Zuko"
     },
     {
       "id": 5,
@@ -46,8 +46,8 @@
       "id": 12
     },
     {
-      "quote": "WHYYY",
-      "author": "Also Me",
+      "quote": "I have said things before, maybe.",
+      "author": "Me",
       "id": 13
     }
   ],
@@ -141,60 +141,12 @@
       "id": 22
     },
     {
-      "quoteId": 2,
-      "createdAt": 1567534481164,
-      "id": 23
-    },
-    {
-      "quoteId": 2,
-      "createdAt": 1567534481420,
-      "id": 24
-    },
-    {
-      "quoteId": 2,
-      "createdAt": 1567534481516,
-      "id": 25
-    },
-    {
-      "quoteId": 2,
-      "createdAt": 1567534481788,
-      "id": 26
-    },
-    {
       "createdAt": 1567534531805,
       "id": 27
     },
     {
       "createdAt": 1567534532029,
       "id": 28
-    },
-    {
-      "quoteId": [
-        null
-      ],
-      "createdAt": 1567534550044,
-      "id": 29
-    },
-    {
-      "quoteId": [
-        null
-      ],
-      "createdAt": 1567534550279,
-      "id": 30
-    },
-    {
-      "quoteId": [
-        null
-      ],
-      "createdAt": 1567534607902,
-      "id": 31
-    },
-    {
-      "quoteId": [
-        null
-      ],
-      "createdAt": 1567534609040,
-      "id": 32
     },
     {
       "quoteId": 4,
@@ -215,11 +167,6 @@
       "quoteId": 5,
       "createdAt": 1567534741372,
       "id": 36
-    },
-    {
-      "quoteId": 13,
-      "createdAt": 1567534878033,
-      "id": 37
     },
     {
       "quoteId": 11,
@@ -290,6 +237,243 @@
       "quoteId": 4,
       "createdAt": 1567535467766,
       "id": 51
+    },
+    {
+      "quoteId": 5,
+      "createdAt": 1567539012057,
+      "id": 52
+    },
+    {
+      "quoteId": 6,
+      "createdAt": 1567539024938,
+      "id": 53
+    },
+    {
+      "quoteId": 6,
+      "createdAt": 1567539170337,
+      "id": 54
+    },
+    {
+      "quoteId": 7,
+      "createdAt": 1567539215475,
+      "id": 55
+    },
+    {
+      "quoteId": 5,
+      "createdAt": 1567539238992,
+      "id": 56
+    },
+    {
+      "quoteId": 6,
+      "createdAt": 1567539240586,
+      "id": 57
+    },
+    {
+      "quoteId": 6,
+      "createdAt": 1567539505618,
+      "id": 58
+    },
+    {
+      "quoteId": 6,
+      "createdAt": 1567540717818,
+      "id": 59
+    },
+    {
+      "createdAt": 1567542734486,
+      "id": 60
+    },
+    {
+      "createdAt": 1567542735200,
+      "id": 61
+    },
+    {
+      "createdAt": 1567542735532,
+      "id": 62
+    },
+    {
+      "createdAt": 1567542735731,
+      "id": 63
+    },
+    {
+      "createdAt": 1567542735956,
+      "id": 64
+    },
+    {
+      "createdAt": 1567542766371,
+      "id": 65
+    },
+    {
+      "createdAt": 1567542766850,
+      "id": 66
+    },
+    {
+      "createdAt": 1567542766972,
+      "id": 67
+    },
+    {
+      "createdAt": 1567542767121,
+      "id": 68
+    },
+    {
+      "createdAt": 1567542767343,
+      "id": 69
+    },
+    {
+      "createdAt": 1567542833200,
+      "id": 70
+    },
+    {
+      "createdAt": 1567542834342,
+      "id": 71
+    },
+    {
+      "createdAt": 1567542847363,
+      "id": 72
+    },
+    {
+      "createdAt": 1567542847846,
+      "id": 73
+    },
+    {
+      "createdAt": 1567542848083,
+      "id": 74
+    },
+    {
+      "createdAt": 1567542848228,
+      "id": 75
+    },
+    {
+      "createdAt": 1567542848373,
+      "id": 76
+    },
+    {
+      "createdAt": 1567542848519,
+      "id": 77
+    },
+    {
+      "createdAt": 1567542848669,
+      "id": 78
+    },
+    {
+      "createdAt": 1567542848812,
+      "id": 79
+    },
+    {
+      "createdAt": 1567542848958,
+      "id": 80
+    },
+    {
+      "createdAt": 1567542849112,
+      "id": 81
+    },
+    {
+      "createdAt": 1567542849277,
+      "id": 82
+    },
+    {
+      "createdAt": 1567542849404,
+      "id": 83
+    },
+    {
+      "createdAt": 1567542849543,
+      "id": 84
+    },
+    {
+      "createdAt": 1567542849690,
+      "id": 85
+    },
+    {
+      "createdAt": 1567542849836,
+      "id": 86
+    },
+    {
+      "createdAt": 1567542849975,
+      "id": 87
+    },
+    {
+      "createdAt": 1567542850117,
+      "id": 88
+    },
+    {
+      "createdAt": 1567542850253,
+      "id": 89
+    },
+    {
+      "createdAt": 1567542850391,
+      "id": 90
+    },
+    {
+      "createdAt": 1567542850537,
+      "id": 91
+    },
+    {
+      "createdAt": 1567542850671,
+      "id": 92
+    },
+    {
+      "createdAt": 1567542850827,
+      "id": 93
+    },
+    {
+      "createdAt": 1567542958830,
+      "id": 94
+    },
+    {
+      "createdAt": 1567542959354,
+      "id": 95
+    },
+    {
+      "createdAt": 1567543009977,
+      "id": 96
+    },
+    {
+      "createdAt": 1567543010630,
+      "id": 97
+    },
+    {
+      "quoteId": null,
+      "createdAt": 1567543084452,
+      "id": 98
+    },
+    {
+      "quoteId": null,
+      "createdAt": 1567543084990,
+      "id": 99
+    },
+    {
+      "quoteId": null,
+      "createdAt": 1567543087740,
+      "id": 100
+    },
+    {
+      "quoteId": null,
+      "createdAt": 1567543140658,
+      "id": 101
+    },
+    {
+      "quoteId": 4,
+      "createdAt": 1567543180141,
+      "id": 102
+    },
+    {
+      "quoteId": 5,
+      "createdAt": 1567543182479,
+      "id": 103
+    },
+    {
+      "quoteId": 13,
+      "createdAt": 1567543324440,
+      "id": 104
+    },
+    {
+      "quoteId": 13,
+      "createdAt": 1567543324647,
+      "id": 105
+    },
+    {
+      "quoteId": 4,
+      "createdAt": 1567552858370,
+      "id": 106
     }
   ]
 }
